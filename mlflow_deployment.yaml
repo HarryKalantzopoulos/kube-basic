@@ -34,7 +34,6 @@ spec:
         - name: http
           containerPort: 5000
           protocol: TCP
-          nodePort: 31450
         resources:
           requests:
             cpu: "500m"
@@ -49,6 +48,7 @@ spec:
     - port: 5000
       targetPort: 5000
       protocol: TCP
+      nodePort: 31450
       name: http
   selector:
     app: mlflow-deployment
