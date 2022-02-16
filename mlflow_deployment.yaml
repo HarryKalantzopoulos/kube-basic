@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: mlflow-deployment
-        image: dkhundley/mlflow-server:latest
+        image: dkhundley/mlflow-server:1.0.3
         imagePullPolicy: Always
         args:
         - --host=0.0.0.0
@@ -27,9 +27,9 @@ spec:
         - name: MLFLOW_S3_ENDPOINT_URL
           value: http://mlflow-minio-service:9000/
         - name: AWS_ACCESS_KEY_ID
-          value: "minio"
+          value: "miniotest"
         - name: AWS_SECRET_ACCESS_KEY
-          value: "minio123"
+          value: "miniotest123"
         ports:
         - name: http
           containerPort: 5000
