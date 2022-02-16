@@ -26,9 +26,9 @@ spec:
           mountPath: '/data'
         env:
         - name: MINIO_ACCESS_KEY
-          value: "minio"
+          value: "miniotest"
         - name: MINIO_SECRET_KEY
-          value: "minio123"
+          value: "miniotest123"
         ports:
         - containerPort: 9000
 ---
