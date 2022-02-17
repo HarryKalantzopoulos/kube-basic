@@ -8,7 +8,7 @@ data:
   POSTGRES_DB: mlflow_db
   POSTGRES_USER: mlflow_user
   POSTGRES_PASSWORD: mlflow_pwd
-  PGDATA: /var/lib/postgresql/mlflow/data
+  PGDATA: /usr/lib/postgresql/mlflow/data
 ---
 apiVersion: apps/v1
 kind: StatefulSet
@@ -42,7 +42,7 @@ spec:
             cpu: "500m"
         volumeMounts:
         - name: mlflow-pvc
-          mountPath: /var/lib/postgresql/mlflow
+          mountPath: /usr/lib/postgresql/mlflow
   volumeClaimTemplates:
   - metadata:
       name: mlflow-pvc
